@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B43709121D04DC7D004E0E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709111D04DC7D004E0E75 /* AppDelegate.swift */; };
+		B43709141D04DC7D004E0E75 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709131D04DC7D004E0E75 /* FirstViewController.swift */; };
+		B43709161D04DC7D004E0E75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709151D04DC7D004E0E75 /* SecondViewController.swift */; };
+		B43709191D04DC7D004E0E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43709171D04DC7D004E0E75 /* Main.storyboard */; };
+		B437091B1D04DC7D004E0E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B437091A1D04DC7D004E0E75 /* Assets.xcassets */; };
+		B437091E1D04DC7D004E0E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B437091C1D04DC7D004E0E75 /* LaunchScreen.storyboard */; };
+		B43709291D04DC7D004E0E75 /* Berkeley_ABA_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709281D04DC7D004E0E75 /* Berkeley_ABA_AppTests.swift */; };
+		B43709341D04DC7D004E0E75 /* Berkeley_ABA_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709331D04DC7D004E0E75 /* Berkeley_ABA_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B43709251D04DC7D004E0E75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B43709061D04DC7D004E0E75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B437090D1D04DC7D004E0E75;
+			remoteInfo = "Berkeley ABA App";
+		};
+		B43709301D04DC7D004E0E75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B43709061D04DC7D004E0E75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B437090D1D04DC7D004E0E75;
+			remoteInfo = "Berkeley ABA App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B437090E1D04DC7D004E0E75 /* Berkeley ABA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Berkeley ABA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43709111D04DC7D004E0E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B43709131D04DC7D004E0E75 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B43709151D04DC7D004E0E75 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B43709181D04DC7D004E0E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B437091A1D04DC7D004E0E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B437091D1D04DC7D004E0E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B437091F1D04DC7D004E0E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B43709241D04DC7D004E0E75 /* Berkeley ABA AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Berkeley ABA AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43709281D04DC7D004E0E75 /* Berkeley_ABA_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Berkeley_ABA_AppTests.swift; sourceTree = "<group>"; };
+		B437092A1D04DC7D004E0E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B437092F1D04DC7D004E0E75 /* Berkeley ABA AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Berkeley ABA AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43709331D04DC7D004E0E75 /* Berkeley_ABA_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Berkeley_ABA_AppUITests.swift; sourceTree = "<group>"; };
+		B43709351D04DC7D004E0E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B437090B1D04DC7D004E0E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43709211D04DC7D004E0E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437092C1D04DC7D004E0E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B43709051D04DC7D004E0E75 = {
+			isa = PBXGroup;
+			children = (
+				B43709101D04DC7D004E0E75 /* Berkeley ABA App */,
+				B43709271D04DC7D004E0E75 /* Berkeley ABA AppTests */,
+				B43709321D04DC7D004E0E75 /* Berkeley ABA AppUITests */,
+				B437090F1D04DC7D004E0E75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B437090F1D04DC7D004E0E75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B437090E1D04DC7D004E0E75 /* Berkeley ABA App.app */,
+				B43709241D04DC7D004E0E75 /* Berkeley ABA AppTests.xctest */,
+				B437092F1D04DC7D004E0E75 /* Berkeley ABA AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B43709101D04DC7D004E0E75 /* Berkeley ABA App */ = {
+			isa = PBXGroup;
+			children = (
+				B43709111D04DC7D004E0E75 /* AppDelegate.swift */,
+				B43709131D04DC7D004E0E75 /* FirstViewController.swift */,
+				B43709151D04DC7D004E0E75 /* SecondViewController.swift */,
+				B43709171D04DC7D004E0E75 /* Main.storyboard */,
+				B437091A1D04DC7D004E0E75 /* Assets.xcassets */,
+				B437091C1D04DC7D004E0E75 /* LaunchScreen.storyboard */,
+				B437091F1D04DC7D004E0E75 /* Info.plist */,
+			);
+			path = "Berkeley ABA App";
+			sourceTree = "<group>";
+		};
+		B43709271D04DC7D004E0E75 /* Berkeley ABA AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B43709281D04DC7D004E0E75 /* Berkeley_ABA_AppTests.swift */,
+				B437092A1D04DC7D004E0E75 /* Info.plist */,
+			);
+			path = "Berkeley ABA AppTests";
+			sourceTree = "<group>";
+		};
+		B43709321D04DC7D004E0E75 /* Berkeley ABA AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B43709331D04DC7D004E0E75 /* Berkeley_ABA_AppUITests.swift */,
+				B43709351D04DC7D004E0E75 /* Info.plist */,
+			);
+			path = "Berkeley ABA AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B437090D1D04DC7D004E0E75 /* Berkeley ABA App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43709381D04DC7E004E0E75 /* Build configuration list for PBXNativeTarget "Berkeley ABA App" */;
+			buildPhases = (
+				B437090A1D04DC7D004E0E75 /* Sources */,
+				B437090B1D04DC7D004E0E75 /* Frameworks */,
+				B437090C1D04DC7D004E0E75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Berkeley ABA App";
+			productName = "Berkeley ABA App";
+			productReference = B437090E1D04DC7D004E0E75 /* Berkeley ABA App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B43709231D04DC7D004E0E75 /* Berkeley ABA AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B437093B1D04DC7E004E0E75 /* Build configuration list for PBXNativeTarget "Berkeley ABA AppTests" */;
+			buildPhases = (
+				B43709201D04DC7D004E0E75 /* Sources */,
+				B43709211D04DC7D004E0E75 /* Frameworks */,
+				B43709221D04DC7D004E0E75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B43709261D04DC7D004E0E75 /* PBXTargetDependency */,
+			);
+			name = "Berkeley ABA AppTests";
+			productName = "Berkeley ABA AppTests";
+			productReference = B43709241D04DC7D004E0E75 /* Berkeley ABA AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B437092E1D04DC7D004E0E75 /* Berkeley ABA AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B437093E1D04DC7E004E0E75 /* Build configuration list for PBXNativeTarget "Berkeley ABA AppUITests" */;
+			buildPhases = (
+				B437092B1D04DC7D004E0E75 /* Sources */,
+				B437092C1D04DC7D004E0E75 /* Frameworks */,
+				B437092D1D04DC7D004E0E75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B43709311D04DC7D004E0E75 /* PBXTargetDependency */,
+			);
+			name = "Berkeley ABA AppUITests";
+			productName = "Berkeley ABA AppUITests";
+			productReference = B437092F1D04DC7D004E0E75 /* Berkeley ABA AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B43709061D04DC7D004E0E75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Timothy Hsu";
+				TargetAttributes = {
+					B437090D1D04DC7D004E0E75 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					B43709231D04DC7D004E0E75 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B437090D1D04DC7D004E0E75;
+					};
+					B437092E1D04DC7D004E0E75 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B437090D1D04DC7D004E0E75;
+					};
+				};
+			};
+			buildConfigurationList = B43709091D04DC7D004E0E75 /* Build configuration list for PBXProject "Berkeley ABA App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B43709051D04DC7D004E0E75;
+			productRefGroup = B437090F1D04DC7D004E0E75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B437090D1D04DC7D004E0E75 /* Berkeley ABA App */,
+				B43709231D04DC7D004E0E75 /* Berkeley ABA AppTests */,
+				B437092E1D04DC7D004E0E75 /* Berkeley ABA AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B437090C1D04DC7D004E0E75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B437091E1D04DC7D004E0E75 /* LaunchScreen.storyboard in Resources */,
+				B437091B1D04DC7D004E0E75 /* Assets.xcassets in Resources */,
+				B43709191D04DC7D004E0E75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43709221D04DC7D004E0E75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437092D1D04DC7D004E0E75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B437090A1D04DC7D004E0E75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43709161D04DC7D004E0E75 /* SecondViewController.swift in Sources */,
+				B43709121D04DC7D004E0E75 /* AppDelegate.swift in Sources */,
+				B43709141D04DC7D004E0E75 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B43709201D04DC7D004E0E75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43709291D04DC7D004E0E75 /* Berkeley_ABA_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437092B1D04DC7D004E0E75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43709341D04DC7D004E0E75 /* Berkeley_ABA_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B43709261D04DC7D004E0E75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B437090D1D04DC7D004E0E75 /* Berkeley ABA App */;
+			targetProxy = B43709251D04DC7D004E0E75 /* PBXContainerItemProxy */;
+		};
+		B43709311D04DC7D004E0E75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B437090D1D04DC7D004E0E75 /* Berkeley ABA App */;
+			targetProxy = B43709301D04DC7D004E0E75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B43709171D04DC7D004E0E75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B43709181D04DC7D004E0E75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B437091C1D04DC7D004E0E75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B437091D1D04DC7D004E0E75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B43709361D04DC7E004E0E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B43709371D04DC7E004E0E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B43709391D04DC7E004E0E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Berkeley ABA App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HsuTimothy.Berkeley-ABA-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B437093A1D04DC7E004E0E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Berkeley ABA App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HsuTimothy.Berkeley-ABA-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B437093C1D04DC7E004E0E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Berkeley ABA AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HsuTimothy.Berkeley-ABA-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Berkeley ABA App.app/Berkeley ABA App";
+			};
+			name = Debug;
+		};
+		B437093D1D04DC7E004E0E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Berkeley ABA AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HsuTimothy.Berkeley-ABA-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Berkeley ABA App.app/Berkeley ABA App";
+			};
+			name = Release;
+		};
+		B437093F1D04DC7E004E0E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Berkeley ABA AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HsuTimothy.Berkeley-ABA-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Berkeley ABA App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B43709401D04DC7E004E0E75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Berkeley ABA AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HsuTimothy.Berkeley-ABA-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Berkeley ABA App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B43709091D04DC7D004E0E75 /* Build configuration list for PBXProject "Berkeley ABA App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43709361D04DC7E004E0E75 /* Debug */,
+				B43709371D04DC7E004E0E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B43709381D04DC7E004E0E75 /* Build configuration list for PBXNativeTarget "Berkeley ABA App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43709391D04DC7E004E0E75 /* Debug */,
+				B437093A1D04DC7E004E0E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B437093B1D04DC7E004E0E75 /* Build configuration list for PBXNativeTarget "Berkeley ABA AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B437093C1D04DC7E004E0E75 /* Debug */,
+				B437093D1D04DC7E004E0E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B437093E1D04DC7E004E0E75 /* Build configuration list for PBXNativeTarget "Berkeley ABA AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B437093F1D04DC7E004E0E75 /* Debug */,
+				B43709401D04DC7E004E0E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B43709061D04DC7D004E0E75 /* Project object */;
+}
