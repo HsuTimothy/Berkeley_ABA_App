@@ -29,6 +29,7 @@
 		B49EFCCF1D06ABCC009EA5C8 /* code holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */; };
 		B4A5D50C1D066BD6004DD385 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D50A1D066BD6004DD385 /* FBSDKCoreKit.framework */; };
 		B4A5D50D1D066BD6004DD385 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */; };
+		B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B21D071EB8001AA109 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		B4A5D50A1D066BD6004DD385 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B4A5D50E1D066D51004DD385 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		B4D7D3B21D071EB8001AA109 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				B43709451D04DCE3004E0E75 /* Berkeley ABA App-Bridging-Header.h */,
 				B49EFCCA1D068495009EA5C8 /* GoogleService-Info.plist */,
 				B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */,
+				B4D7D3B21D071EB8001AA109 /* Reachability.swift */,
 				B49EFCC81D0676A4009EA5C8 /* Firebase.framework */,
 			);
 			path = "Berkeley ABA App";
@@ -492,6 +495,7 @@
 				B437094A1D04E178004E0E75 /* LoginViewController.swift in Sources */,
 				B43709511D04FB88004E0E75 /* OfficersTableViewController.swift in Sources */,
 				B43709161D04DC7D004E0E75 /* ProfileViewController.swift in Sources */,
+				B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */,
 				B49EFCCF1D06ABCC009EA5C8 /* code holder.swift in Sources */,
 				B43709121D04DC7D004E0E75 /* AppDelegate.swift in Sources */,
 				B43709141D04DC7D004E0E75 /* EventsViewController.swift in Sources */,

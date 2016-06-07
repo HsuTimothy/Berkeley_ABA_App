@@ -20,14 +20,21 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var usernameField: UITextField!
     
     @IBAction func normalLoginButtonTapped(sender: AnyObject) {
-        login()
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet is okay")
+            login()
+        } else {
+            print("Internet connection failed")
+            let myAlert = UIAlertView(title: "Error", message: "No Internet Connection", delegate: nil, cancelButtonTitle: "Ok")
+            myAlert.show()
+        }
     }
     
     func login() {
         FIRAuth.auth()?.signInWithEmail(usernameField.text!, password: passwordField.text!, completion: { user, error in
             if error != nil {
-                print("incorrect username or password")
-                let myAlert = UIAlertView(title: "Error", message: "Incorrect Password or Username", delegate: nil, cancelButtonTitle: "Ok")
+                print("incorrect username or password/internet connection")
+                let myAlert = UIAlertView(title: "Error", message: "Incorrect Password or Username. Check your Internet connection.", delegate: nil, cancelButtonTitle: "Ok")
                 myAlert.show()
             }
             else {
@@ -53,8 +60,18 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         let theHeight = view.frame.size.height
         loginButton.frame = CGRect(x: 0, y: theHeight - 50 , width: self.view.frame.width, height: 50)
         loginButton.delegate = self
-        
-        
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet is okay")
+            autoLogin()
+        } else {
+            print("Internet connection failed")
+            let myAlert = UIAlertView(title: "Error", message: "No Internet Connection", delegate: nil, cancelButtonTitle: "Ok")
+            myAlert.show()
+        }
+        // Do any additional setup after loading the view.
+    }
+    
+    func autoLogin() {
         if let _ = FBSDKAccessToken.currentAccessToken() {
             let parameters = ["fields":"email, first_name, last_name, picture.type(large)"]
             FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler { (connection, result, error) -> Void in
@@ -85,13 +102,17 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             appDelegate.window?.rootViewController = iniitalViewController
             appDelegate.window?.makeKeyAndVisible()
         }
-        
-        // Do any additional setup after loading the view.
     }
-    
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("Completed login")
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet is okay")
             fetchProfile()
+        } else {
+            print("Internet connection failed")
+            let myAlert = UIAlertView(title: "Error", message: "No Internet Connection", delegate: nil, cancelButtonTitle: "Ok")
+            myAlert.show()
+        }
     }
     
     func fetchProfile(){

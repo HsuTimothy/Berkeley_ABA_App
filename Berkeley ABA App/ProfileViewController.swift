@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import SDWebImage
+import Firebase
 
 class ProfileViewController: UIViewController {
 
@@ -18,6 +19,11 @@ class ProfileViewController: UIViewController {
     
     
     @IBAction func LogoutButtonTapped(sender: UIButton) {
+        
+        if facebookLogin == false {
+            //FIRAuth.auth()?.signOut()
+        }
+        
         facebookLogin = false
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
