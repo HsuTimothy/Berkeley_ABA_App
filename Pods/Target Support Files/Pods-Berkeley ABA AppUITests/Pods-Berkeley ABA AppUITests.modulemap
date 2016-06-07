@@ -1,6 +1,0 @@
-framework module Pods_Berkeley_ABA_AppUITests {
-  umbrella header "Pods-Berkeley ABA AppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

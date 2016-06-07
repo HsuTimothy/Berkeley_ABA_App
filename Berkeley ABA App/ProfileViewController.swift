@@ -13,10 +13,12 @@ import SDWebImage
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var firstAndLastName: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
     
     @IBAction func LogoutButtonTapped(sender: UIButton) {
+        facebookLogin = false
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
         
@@ -41,11 +43,24 @@ class ProfileViewController: UIViewController {
         profileImage.layer.borderWidth = 0.5
         
         // displays my image based on a Url
-        let imageUrl = NSURL(string: profileUrl)
-        
-        if let url = imageUrl {
-            profileImage.sd_setImageWithURL(url)
+        if facebookLogin == true {
+            let imageUrl = NSURL(string: profileUrl)
+            if let url = imageUrl {
+                profileImage.sd_setImageWithURL(url)
+            }
+        } else {
+            let imageUrl = NSURL(string: "http://communities.naae.org/5.0.2/images/jive-profile-default-portrait.png")
+            if let url = imageUrl {
+                profileImage.sd_setImageWithURL(url)
+            }
         }
+        if facebookLogin {
+            firstAndLastName.text! = facebookFirstName + " " + facebookLastName
+        } else {
+            firstAndLastName.text! = nonFacebookFirstName + " " + nonFacebookLastName
+            // NON FACEBOOK FIRST AND LAST NAME HERE
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

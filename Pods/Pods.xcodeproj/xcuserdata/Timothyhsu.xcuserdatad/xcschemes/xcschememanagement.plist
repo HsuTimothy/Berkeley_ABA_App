@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Berkeley ABA AppTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Berkeley ABA AppUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +22,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43E4B89A65F3825F0B40E3A991142A1B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>B523A5323803DFEB0FB724BE366A8CEF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EC123211067046C1963297B7A67E0D31</key>
 		<dict>
 			<key>primary</key>
 			<true/>

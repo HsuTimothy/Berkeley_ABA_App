@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C2C6DE7D861CD8EDF25B502 /* Pods_Berkeley_ABA_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAF4D75005BCBED2B7C7058 /* Pods_Berkeley_ABA_AppTests.framework */; };
 		52E180FB69DB61F04FF91D9F /* Pods_Berkeley_ABA_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4B1F22C9518346FFFDC952 /* Pods_Berkeley_ABA_App.framework */; };
 		B43709121D04DC7D004E0E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709111D04DC7D004E0E75 /* AppDelegate.swift */; };
 		B43709141D04DC7D004E0E75 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709131D04DC7D004E0E75 /* EventsViewController.swift */; };
@@ -20,9 +19,16 @@
 		B437094A1D04E178004E0E75 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709491D04E178004E0E75 /* LoginViewController.swift */; };
 		B437094C1D04F0CB004E0E75 /* CommitteesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B437094B1D04F0CB004E0E75 /* CommitteesTableViewController.swift */; };
 		B43709511D04FB88004E0E75 /* OfficersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43709501D04FB88004E0E75 /* OfficersTableViewController.swift */; };
-		B4A5D5061D064954004DD385 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D5041D064954004DD385 /* FBSDKCoreKit.framework */; };
-		B4A5D5071D064954004DD385 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D5051D064954004DD385 /* FBSDKLoginKit.framework */; };
-		F75E52DC4F42A70D8AE65533 /* Pods_Berkeley_ABA_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DE27E6B6D90ED834938E8E /* Pods_Berkeley_ABA_AppUITests.framework */; };
+		B49EFCBF1D067505009EA5C8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCBE1D067505009EA5C8 /* libicucore.tbd */; };
+		B49EFCC11D067515009EA5C8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC01D067515009EA5C8 /* libc++.tbd */; };
+		B49EFCC31D067647009EA5C8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC21D067647009EA5C8 /* CFNetwork.framework */; };
+		B49EFCC51D06764F009EA5C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC41D06764F009EA5C8 /* Security.framework */; };
+		B49EFCC71D067658009EA5C8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC61D067658009EA5C8 /* SystemConfiguration.framework */; };
+		B49EFCCB1D068495009EA5C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49EFCCA1D068495009EA5C8 /* GoogleService-Info.plist */; };
+		B49EFCCD1D06875D009EA5C8 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */; };
+		B49EFCCF1D06ABCC009EA5C8 /* code holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */; };
+		B4A5D50C1D066BD6004DD385 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D50A1D066BD6004DD385 /* FBSDKCoreKit.framework */; };
+		B4A5D50D1D066BD6004DD385 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,15 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		158799C57D55D9566564EB98 /* Pods-Berkeley ABA AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkeley ABA AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Berkeley ABA AppTests/Pods-Berkeley ABA AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		24829880FE1C6090E5EDEC60 /* Pods-Berkeley ABA App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkeley ABA App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Berkeley ABA App/Pods-Berkeley ABA App.release.xcconfig"; sourceTree = "<group>"; };
 		48DE27E6B6D90ED834938E8E /* Pods_Berkeley_ABA_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Berkeley_ABA_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5737E5897894F53BC2C618BD /* Pods-Berkeley ABA AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkeley ABA AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Berkeley ABA AppUITests/Pods-Berkeley ABA AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5F1B95027DAB70F0FAB0A75A /* Pods-Berkeley ABA AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkeley ABA AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Berkeley ABA AppTests/Pods-Berkeley ABA AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C4B1F22C9518346FFFDC952 /* Pods_Berkeley_ABA_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Berkeley_ABA_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCC436BEECDA361DFC7939B /* Pods-Berkeley ABA App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkeley ABA App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Berkeley ABA App/Pods-Berkeley ABA App.debug.xcconfig"; sourceTree = "<group>"; };
 		9BAF4D75005BCBED2B7C7058 /* Pods_Berkeley_ABA_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Berkeley_ABA_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A83D83BF171E666EEC876E10 /* Pods-Berkeley ABA AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Berkeley ABA AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Berkeley ABA AppUITests/Pods-Berkeley ABA AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B437090E1D04DC7D004E0E75 /* Berkeley ABA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Berkeley ABA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43709111D04DC7D004E0E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43709131D04DC7D004E0E75 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -70,8 +72,18 @@
 		B43709491D04E178004E0E75 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B437094B1D04F0CB004E0E75 /* CommitteesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitteesTableViewController.swift; sourceTree = "<group>"; };
 		B43709501D04FB88004E0E75 /* OfficersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficersTableViewController.swift; sourceTree = "<group>"; };
-		B4A5D5041D064954004DD385 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		B4A5D5051D064954004DD385 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B49EFCBE1D067505009EA5C8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		B49EFCC01D067515009EA5C8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B49EFCC21D067647009EA5C8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B49EFCC41D06764F009EA5C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B49EFCC61D067658009EA5C8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B49EFCC81D0676A4009EA5C8 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Firebase.framework; sourceTree = "<group>"; };
+		B49EFCCA1D068495009EA5C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "code holder.swift"; sourceTree = "<group>"; };
+		B4A5D50A1D066BD6004DD385 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B4A5D50E1D066D51004DD385 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +91,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49EFCC71D067658009EA5C8 /* SystemConfiguration.framework in Frameworks */,
+				B49EFCC51D06764F009EA5C8 /* Security.framework in Frameworks */,
+				B49EFCC31D067647009EA5C8 /* CFNetwork.framework in Frameworks */,
+				B49EFCC11D067515009EA5C8 /* libc++.tbd in Frameworks */,
+				B49EFCBF1D067505009EA5C8 /* libicucore.tbd in Frameworks */,
 				52E180FB69DB61F04FF91D9F /* Pods_Berkeley_ABA_App.framework in Frameworks */,
-				B4A5D5061D064954004DD385 /* FBSDKCoreKit.framework in Frameworks */,
-				B4A5D5071D064954004DD385 /* FBSDKLoginKit.framework in Frameworks */,
+				B4A5D50C1D066BD6004DD385 /* FBSDKCoreKit.framework in Frameworks */,
+				B4A5D50D1D066BD6004DD385 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C2C6DE7D861CD8EDF25B502 /* Pods_Berkeley_ABA_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F75E52DC4F42A70D8AE65533 /* Pods_Berkeley_ABA_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +124,6 @@
 			children = (
 				7FCC436BEECDA361DFC7939B /* Pods-Berkeley ABA App.debug.xcconfig */,
 				24829880FE1C6090E5EDEC60 /* Pods-Berkeley ABA App.release.xcconfig */,
-				158799C57D55D9566564EB98 /* Pods-Berkeley ABA AppTests.debug.xcconfig */,
-				5F1B95027DAB70F0FAB0A75A /* Pods-Berkeley ABA AppTests.release.xcconfig */,
-				5737E5897894F53BC2C618BD /* Pods-Berkeley ABA AppUITests.debug.xcconfig */,
-				A83D83BF171E666EEC876E10 /* Pods-Berkeley ABA AppUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -120,6 +131,8 @@
 		B43709051D04DC7D004E0E75 = {
 			isa = PBXGroup;
 			children = (
+				B4A5D50A1D066BD6004DD385 /* FBSDKCoreKit.framework */,
+				B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */,
 				B43709101D04DC7D004E0E75 /* Berkeley ABA App */,
 				B43709271D04DC7D004E0E75 /* Berkeley ABA AppTests */,
 				B43709321D04DC7D004E0E75 /* Berkeley ABA AppUITests */,
@@ -143,10 +156,9 @@
 		B43709101D04DC7D004E0E75 /* Berkeley ABA App */ = {
 			isa = PBXGroup;
 			children = (
-				B4A5D5041D064954004DD385 /* FBSDKCoreKit.framework */,
-				B4A5D5051D064954004DD385 /* FBSDKLoginKit.framework */,
 				B43709111D04DC7D004E0E75 /* AppDelegate.swift */,
 				B43709491D04E178004E0E75 /* LoginViewController.swift */,
+				B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */,
 				B43709131D04DC7D004E0E75 /* EventsViewController.swift */,
 				B437094B1D04F0CB004E0E75 /* CommitteesTableViewController.swift */,
 				B43709151D04DC7D004E0E75 /* ProfileViewController.swift */,
@@ -155,6 +167,9 @@
 				B437091C1D04DC7D004E0E75 /* LaunchScreen.storyboard */,
 				B437091F1D04DC7D004E0E75 /* Info.plist */,
 				B43709451D04DCE3004E0E75 /* Berkeley ABA App-Bridging-Header.h */,
+				B49EFCCA1D068495009EA5C8 /* GoogleService-Info.plist */,
+				B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */,
+				B49EFCC81D0676A4009EA5C8 /* Firebase.framework */,
 			);
 			path = "Berkeley ABA App";
 			sourceTree = "<group>";
@@ -196,6 +211,12 @@
 		F43EF889D1AF1F6FE0BE45F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B49EFCC61D067658009EA5C8 /* SystemConfiguration.framework */,
+				B49EFCC41D06764F009EA5C8 /* Security.framework */,
+				B49EFCC21D067647009EA5C8 /* CFNetwork.framework */,
+				B49EFCC01D067515009EA5C8 /* libc++.tbd */,
+				B49EFCBE1D067505009EA5C8 /* libicucore.tbd */,
+				B4A5D50E1D066D51004DD385 /* Firebase.framework */,
 				7C4B1F22C9518346FFFDC952 /* Pods_Berkeley_ABA_App.framework */,
 				9BAF4D75005BCBED2B7C7058 /* Pods_Berkeley_ABA_AppTests.framework */,
 				48DE27E6B6D90ED834938E8E /* Pods_Berkeley_ABA_AppUITests.framework */,
@@ -316,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B437091E1D04DC7D004E0E75 /* LaunchScreen.storyboard in Resources */,
+				B49EFCCB1D068495009EA5C8 /* GoogleService-Info.plist in Resources */,
 				B437091B1D04DC7D004E0E75 /* Assets.xcassets in Resources */,
 				B43709191D04DC7D004E0E75 /* Main.storyboard in Resources */,
 			);
@@ -465,10 +487,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49EFCCD1D06875D009EA5C8 /* CreateAccountViewController.swift in Sources */,
 				B437094C1D04F0CB004E0E75 /* CommitteesTableViewController.swift in Sources */,
 				B437094A1D04E178004E0E75 /* LoginViewController.swift in Sources */,
 				B43709511D04FB88004E0E75 /* OfficersTableViewController.swift in Sources */,
 				B43709161D04DC7D004E0E75 /* ProfileViewController.swift in Sources */,
+				B49EFCCF1D06ABCC009EA5C8 /* code holder.swift in Sources */,
 				B43709121D04DC7D004E0E75 /* AppDelegate.swift in Sources */,
 				B43709141D04DC7D004E0E75 /* EventsViewController.swift in Sources */,
 			);
@@ -634,6 +658,7 @@
 					"$(PROJECT_DIR)/Berkeley",
 					ABA,
 					App,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Berkeley ABA App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -670,6 +695,7 @@
 					"$(PROJECT_DIR)/Berkeley",
 					ABA,
 					App,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Berkeley ABA App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -681,7 +707,6 @@
 		};
 		B437093C1D04DC7E004E0E75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 158799C57D55D9566564EB98 /* Pods-Berkeley ABA AppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Berkeley ABA AppTests/Info.plist";
@@ -694,7 +719,6 @@
 		};
 		B437093D1D04DC7E004E0E75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F1B95027DAB70F0FAB0A75A /* Pods-Berkeley ABA AppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Berkeley ABA AppTests/Info.plist";
@@ -707,7 +731,6 @@
 		};
 		B437093F1D04DC7E004E0E75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5737E5897894F53BC2C618BD /* Pods-Berkeley ABA AppUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Berkeley ABA AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -720,7 +743,6 @@
 		};
 		B43709401D04DC7E004E0E75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A83D83BF171E666EEC876E10 /* Pods-Berkeley ABA AppUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Berkeley ABA AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
