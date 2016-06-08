@@ -35,6 +35,7 @@ PODS:
   - SDWebImage/Core (3.8.0)
 
 DEPENDENCIES:
+  - Firebase
   - Firebase (>= 2.5.1)
   - Firebase/Auth
   - Firebase/Database
@@ -52,6 +53,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
 
-PODFILE CHECKSUM: 257f50de23ce861623f47a9260f4028d731e8024
+PODFILE CHECKSUM: 8fadeb01c9e2130edd0e00465a2648a30dcfe34b
 
 COCOAPODS: 1.0.1

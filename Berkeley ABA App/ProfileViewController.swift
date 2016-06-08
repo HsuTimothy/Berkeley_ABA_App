@@ -24,20 +24,35 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBAction func LogoutButtonTapped(sender: UIButton) {
         
         if facebookLogin == false {
-            //FIRAuth.auth()?.signOut()
+            do {
+                nonFacebookFirstName = ""
+                nonFacebookLastName = ""
+            try FIRAuth.auth()?.signOut()
+                let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+                
+                let loginPageNav = UINavigationController(rootViewController: loginPage)
+                
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                
+                appDelegate.window?.rootViewController = loginPageNav
+            } catch is NSError {
+                print("Error")
+            }
         }
+        else {
+            print("IM HERE")
+            facebookLogin = false
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
         
-        facebookLogin = false
-        let loginManager = FBSDKLoginManager()
-        loginManager.logOut()
+            let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         
-        let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+            let loginPageNav = UINavigationController(rootViewController: loginPage)
         
-        let loginPageNav = UINavigationController(rootViewController: loginPage)
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        appDelegate.window?.rootViewController = loginPageNav
+            appDelegate.window?.rootViewController = loginPageNav
+        }
     }
     
     override func viewDidLoad() {

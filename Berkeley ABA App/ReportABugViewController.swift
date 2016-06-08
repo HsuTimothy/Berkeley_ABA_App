@@ -16,7 +16,9 @@ class ReportABugViewController: UIViewController, MFMailComposeViewControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let myBodyTextBorderColor : UIColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
+        Body.layer.borderColor = myBodyTextBorderColor.CGColor
+        Body.layer.borderWidth = 1.0
         // Do any additional setup after loading the view.
     }
 

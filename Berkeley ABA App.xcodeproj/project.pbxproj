@@ -24,14 +24,15 @@
 		B49EFCC31D067647009EA5C8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC21D067647009EA5C8 /* CFNetwork.framework */; };
 		B49EFCC51D06764F009EA5C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC41D06764F009EA5C8 /* Security.framework */; };
 		B49EFCC71D067658009EA5C8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC61D067658009EA5C8 /* SystemConfiguration.framework */; };
-		B49EFCCB1D068495009EA5C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49EFCCA1D068495009EA5C8 /* GoogleService-Info.plist */; };
 		B49EFCCD1D06875D009EA5C8 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */; };
-		B49EFCCF1D06ABCC009EA5C8 /* code holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */; };
 		B4A5D50C1D066BD6004DD385 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D50A1D066BD6004DD385 /* FBSDKCoreKit.framework */; };
 		B4A5D50D1D066BD6004DD385 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */; };
 		B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B21D071EB8001AA109 /* Reachability.swift */; };
 		B4D7D3B71D079077001AA109 /* ProfilePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B61D079077001AA109 /* ProfilePageTableViewCell.swift */; };
 		B4D7D3B91D07918E001AA109 /* ReportABugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */; };
+		B4D7D3C11D080783001AA109 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4D7D3C01D080783001AA109 /* GoogleService-Info.plist */; };
+		B4D7D3C21D080783001AA109 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4D7D3C01D080783001AA109 /* GoogleService-Info.plist */; };
+		B4D7D3C31D080784001AA109 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4D7D3C01D080783001AA109 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,7 @@
 		B437090E1D04DC7D004E0E75 /* Berkeley ABA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Berkeley ABA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43709111D04DC7D004E0E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43709131D04DC7D004E0E75 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		B43709151D04DC7D004E0E75 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B43709151D04DC7D004E0E75 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../ProfileViewController.swift; sourceTree = "<group>"; };
 		B43709181D04DC7D004E0E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B437091A1D04DC7D004E0E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B437091D1D04DC7D004E0E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,7 +73,7 @@
 		B43709331D04DC7D004E0E75 /* Berkeley_ABA_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Berkeley_ABA_AppUITests.swift; sourceTree = "<group>"; };
 		B43709351D04DC7D004E0E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B43709451D04DCE3004E0E75 /* Berkeley ABA App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Berkeley ABA App-Bridging-Header.h"; sourceTree = "<group>"; };
-		B43709491D04E178004E0E75 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B43709491D04E178004E0E75 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../LoginViewController.swift; sourceTree = "<group>"; };
 		B437094B1D04F0CB004E0E75 /* CommitteesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitteesTableViewController.swift; sourceTree = "<group>"; };
 		B43709501D04FB88004E0E75 /* OfficersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficersTableViewController.swift; sourceTree = "<group>"; };
 		B49EFCBE1D067505009EA5C8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -81,15 +82,14 @@
 		B49EFCC41D06764F009EA5C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B49EFCC61D067658009EA5C8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B49EFCC81D0676A4009EA5C8 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Firebase.framework; sourceTree = "<group>"; };
-		B49EFCCA1D068495009EA5C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "code holder.swift"; sourceTree = "<group>"; };
+		B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountViewController.swift; path = ../../CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B4A5D50A1D066BD6004DD385 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B4A5D50E1D066D51004DD385 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		B4D7D3B21D071EB8001AA109 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		B4D7D3B61D079077001AA109 /* ProfilePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePageTableViewCell.swift; sourceTree = "<group>"; };
-		B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportABugViewController.swift; sourceTree = "<group>"; };
+		B4D7D3B61D079077001AA109 /* ProfilePageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePageTableViewCell.swift; path = ../ProfilePageTableViewCell.swift; sourceTree = "<group>"; };
+		B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportABugViewController.swift; path = ../ReportABugViewController.swift; sourceTree = "<group>"; };
+		B4D7D3C01D080783001AA109 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,21 +163,17 @@
 			isa = PBXGroup;
 			children = (
 				B43709111D04DC7D004E0E75 /* AppDelegate.swift */,
-				B43709491D04E178004E0E75 /* LoginViewController.swift */,
-				B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */,
+				B4D7D3BB1D07ABD4001AA109 /* Login Page */,
+				B4D7D3BA1D07AB93001AA109 /* Profile Page */,
 				B43709131D04DC7D004E0E75 /* EventsViewController.swift */,
 				B437094B1D04F0CB004E0E75 /* CommitteesTableViewController.swift */,
-				B43709151D04DC7D004E0E75 /* ProfileViewController.swift */,
 				B43709171D04DC7D004E0E75 /* Main.storyboard */,
-				B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */,
-				B4D7D3B61D079077001AA109 /* ProfilePageTableViewCell.swift */,
 				B437091A1D04DC7D004E0E75 /* Assets.xcassets */,
 				B437091C1D04DC7D004E0E75 /* LaunchScreen.storyboard */,
 				B437091F1D04DC7D004E0E75 /* Info.plist */,
 				B43709451D04DCE3004E0E75 /* Berkeley ABA App-Bridging-Header.h */,
-				B49EFCCA1D068495009EA5C8 /* GoogleService-Info.plist */,
-				B49EFCCE1D06ABCC009EA5C8 /* code holder.swift */,
 				B4D7D3B21D071EB8001AA109 /* Reachability.swift */,
+				B4D7D3C01D080783001AA109 /* GoogleService-Info.plist */,
 				B49EFCC81D0676A4009EA5C8 /* Firebase.framework */,
 			);
 			path = "Berkeley ABA App";
@@ -215,6 +211,26 @@
 				B43709501D04FB88004E0E75 /* OfficersTableViewController.swift */,
 			);
 			path = Officers;
+			sourceTree = "<group>";
+		};
+		B4D7D3BA1D07AB93001AA109 /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				B4D7D3B61D079077001AA109 /* ProfilePageTableViewCell.swift */,
+				B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */,
+				B43709151D04DC7D004E0E75 /* ProfileViewController.swift */,
+			);
+			path = "Profile Page";
+			sourceTree = "<group>";
+		};
+		B4D7D3BB1D07ABD4001AA109 /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				B43709491D04E178004E0E75 /* LoginViewController.swift */,
+				B49EFCCC1D06875D009EA5C8 /* CreateAccountViewController.swift */,
+			);
+			name = "Login Page";
+			path = "Profile Page/Login Page";
 			sourceTree = "<group>";
 		};
 		F43EF889D1AF1F6FE0BE45F7 /* Frameworks */ = {
@@ -346,8 +362,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B437091E1D04DC7D004E0E75 /* LaunchScreen.storyboard in Resources */,
-				B49EFCCB1D068495009EA5C8 /* GoogleService-Info.plist in Resources */,
 				B437091B1D04DC7D004E0E75 /* Assets.xcassets in Resources */,
+				B4D7D3C11D080783001AA109 /* GoogleService-Info.plist in Resources */,
 				B43709191D04DC7D004E0E75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D7D3C21D080783001AA109 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D7D3C31D080784001AA109 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +520,6 @@
 				B43709511D04FB88004E0E75 /* OfficersTableViewController.swift in Sources */,
 				B43709161D04DC7D004E0E75 /* ProfileViewController.swift in Sources */,
 				B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */,
-				B49EFCCF1D06ABCC009EA5C8 /* code holder.swift in Sources */,
 				B43709121D04DC7D004E0E75 /* AppDelegate.swift in Sources */,
 				B4D7D3B91D07918E001AA109 /* ReportABugViewController.swift in Sources */,
 				B4D7D3B71D079077001AA109 /* ProfilePageTableViewCell.swift in Sources */,
