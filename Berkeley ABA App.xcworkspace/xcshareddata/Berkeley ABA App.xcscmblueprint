@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "09F4116B3E4C7F7F9AA08052E59280E00B6E06B0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "09F4116B3E4C7F7F9AA08052E59280E00B6E06B0" : 0,
+    "F288CA9B247BF0863B3A8A8967ACA33DF09EDEDC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1E6995B5-ECAE-4769-94F4-A4E13632F455",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "09F4116B3E4C7F7F9AA08052E59280E00B6E06B0" : "Berkeley%20ABA%20App\/",
+    "F288CA9B247BF0863B3A8A8967ACA33DF09EDEDC" : "Berkeley%20ABA%20App\/Berkeley%20ABA%20App\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Berkeley ABA App",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Berkeley ABA App.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/HsuTimothy\/Berkeley_ABA_App",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "09F4116B3E4C7F7F9AA08052E59280E00B6E06B0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/HsuTimothy\/Berkeley_ABA_App",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F288CA9B247BF0863B3A8A8967ACA33DF09EDEDC"
+    }
+  ]
+}

@@ -12,11 +12,14 @@ import FBSDKCoreKit
 import SDWebImage
 import Firebase
 
-class ProfileViewController: UIViewController {
-
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var firstAndLastName: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
+    var objects: NSMutableArray! = NSMutableArray()
     
     @IBAction func LogoutButtonTapped(sender: UIButton) {
         
@@ -41,12 +44,23 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         print("profile page loaded")
         
+        // My table view
+        self.objects.addObject("Report a bug")
+        
+        self.tableView.reloadData()
+        
+        // My logout button
+        logoutButton.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
+        let myLogoutButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        logoutButton.layer.borderColor = myLogoutButtonColor.CGColor
+        logoutButton.layer.borderWidth = 0.5
+        
         // makes my picture circular and sets border + border color
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
         profileImage.clipsToBounds = true
-        let myColor : UIColor = UIColor.blackColor()
-        profileImage.layer.borderColor = myColor.CGColor
-        profileImage.layer.borderWidth = 0.5
+        let myPictureColor : UIColor = UIColor.blackColor()
+        profileImage.layer.borderColor = myPictureColor.CGColor
+        profileImage.layer.borderWidth = 0.3
         
         // displays my image based on a Url
         if facebookLogin == true {
@@ -73,6 +87,25 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - MY TABLE VIEW
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.objects.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ProfilePageTableViewCell
+        
+        cell.labelTitle.text = self.objects.objectAtIndex(indexPath.row) as? String
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("im here")
+        self.performSegueWithIdentifier("showView", sender: self)
+    }
 }
 
