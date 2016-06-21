@@ -13,6 +13,7 @@ var profileUrl = ""
 var facebookLogin = false
 var facebookFirstName = ""
 var facebookLastName = ""
+var userIdentifier = ""
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -39,6 +40,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
             else {
                 print("logged in no problem")
+                userIdentifier = self.usernameField.text!
+                userIdentifier = userIdentifier.lowercaseString
+                userIdentifier = userIdentifier.stringByReplacingOccurrencesOfString(".", withString: ",")
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 let iniitalViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Events1ViewController")
                 appDelegate.window?.rootViewController = iniitalViewController
@@ -107,7 +111,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         print("Completed login")
         if Reachability.isConnectedToNetwork() == true {
             print("Internet is okay")
-            fetchProfile()
+            let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+            FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+                self.fetchProfile()
+            }
         } else {
             print("Internet connection failed")
             let myAlert = UIAlertView(title: "Error", message: "No Internet Connection", delegate: nil, cancelButtonTitle: "Ok")

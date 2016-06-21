@@ -43,6 +43,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             print("IM HERE")
             facebookLogin = false
             let loginManager = FBSDKLoginManager()
+            try! FIRAuth.auth()!.signOut()
             loginManager.logOut()
         
             let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
@@ -58,6 +59,39 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         print("profile page loaded")
+        
+        // *MARK - An attempt to retrieve data but it doesn't seem to be working...
+//        var userRef:FIRDatabaseReference!
+//        userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+//            
+//            if !snapshot.exists() {
+//                print("none found")
+//            }
+//            
+//            print(snapshot)
+//            
+//            if let userName = snapshot.value!["full_name"] as? String {
+//                print(userName)
+//            }
+//            if let email = snapshot.value!["email"] as? String {
+//                print(email)
+//            }
+//        
+//             // can also use
+//             // snapshot.childSnapshotForPath("full_name").value as! String
+//        })
+//        
+//        ref.queryOrderedByChild("email").queryEqualToValue(userIdentifier).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+//                if ( snapshot.value is NSNull ) {
+//                    print("not found")
+//                } else {
+//                    for child in snapshot.children {
+//                        let n = child.value!!["email"] as! String
+//                        print(n)
+//                    }
+//                }
+//            })
+        
         
         // My table view
         self.objects.addObject("Report a bug")

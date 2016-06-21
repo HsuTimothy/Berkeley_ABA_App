@@ -12,6 +12,9 @@ import Firebase
 var nonFacebookFirstName = ""
 var nonFacebookLastName = ""
 
+// Create a reference to my Firebase location
+let ref = FIRDatabase.database().reference()
+
 class CreateAccountViewController: UIViewController {
 
     @IBOutlet weak var lastName: UITextField!
@@ -28,18 +31,34 @@ class CreateAccountViewController: UIViewController {
         } else if (desiredPassword.text!.characters.count == 0 && retypedPassword.text!.characters.count == 0) {
             let myAlert = UIAlertView(title: "Error", message: "Password cannot be blank", delegate: nil, cancelButtonTitle: "Ok")
             myAlert.show()
-        }
-        else {
+        } else if (desiredPassword.text!.characters.count <= 6) {
+            let myAlert = UIAlertView(title: "Error", message: "Password must be at least 6 characters", delegate: nil, cancelButtonTitle: "Ok")
+            myAlert.show()
+        } else {
             if Reachability.isConnectedToNetwork() == true {
                 print("Internet is okay")
                 FIRAuth.auth()?.createUserWithEmail(desiredUsername.text!, password: desiredPassword.text!,     completion: { user, error in
                     if error != nil {
-                        print("Account already exists")
                         let myAlert = UIAlertView(title: "Alert", message: "Account already exists", delegate: nil, cancelButtonTitle: "Ok")
                         myAlert.show()
                     } else {
                         nonFacebookFirstName = self.firstName.text!
                         nonFacebookLastName = self.lastName.text!
+                        
+                        // Write data to my Firebase
+                        // NOTE - PEOPLE WITH THE SAME FIRST AND LASTNAME WILL OVERRIDE EACH OTHER
+                        let full_name = self.firstName.text! + " " + self.lastName.text!
+                        let email = self.desiredUsername.text!
+                        var newUser = [ "email": email, "full_name": full_name]
+                        var usersRef = ref.childByAppendingPath("users")
+                        var userKey = email.lowercaseString
+                        userKey = userKey.stringByReplacingOccurrencesOfString(".", withString: ",")
+                        var users = [userKey: newUser]
+                        usersRef.setValue(users)
+                        userIdentifier = self.desiredUsername.text!
+                        userIdentifier = userIdentifier.lowercaseString
+                        userIdentifier = userIdentifier.stringByReplacingOccurrencesOfString(".", withString: ",")
+                        
                         self.login()
                     }
                 })

@@ -5,14 +5,20 @@ target 'Berkeley ABA App' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
 
   # Pods for Berkeley ABA App
-pod 'Firebase', '>= 2.5.1'
+
 pod ‘Firebase/Auth’
-  use_frameworks!
+
+use_frameworks!
 
 pod 'SDWebImage', '~>3.8'
     
 pod 'Firebase/Database'
 
 pod 'Firebase'
+
+pod 'Firebase/Messaging'
+
+pod 'GoogleAPIClient/Calendar', '~>1.0.2'
+pod 'GTMOAuth2', '~> 1.1.0'
 
 end
