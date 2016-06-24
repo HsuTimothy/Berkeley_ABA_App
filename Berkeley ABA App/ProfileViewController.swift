@@ -11,17 +11,16 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import SDWebImage
 import Firebase
+import SafariServices
 
-class ProfileViewController: UIViewController {
-    
-    @IBOutlet weak var VisitTheWebsiteButton: UIButton!
+class ProfileViewController: UIViewController, SFSafariViewControllerDelegate {
+
     @IBOutlet weak var ReportABugButton: UIButton!
+    @IBOutlet weak var VisitTheWebsiteButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var firstAndLastName: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
-    
-    var objects: NSMutableArray! = NSMutableArray()
     
     @IBAction func LogoutButtonTapped(sender: UIButton) {
         
@@ -62,37 +61,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         print("profile page loaded")
         
-        // *MARK - An attempt to retrieve data but it doesn't seem to be working...
-//        var userRef:FIRDatabaseReference!
-//        userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-//            
-//            if !snapshot.exists() {
-//                print("none found")
-//            }
-//            
-//            print(snapshot)
-//            
-//            if let userName = snapshot.value!["full_name"] as? String {
-//                print(userName)
-//            }
-//            if let email = snapshot.value!["email"] as? String {
-//                print(email)
-//            }
-//        
-//             // can also use
-//             // snapshot.childSnapshotForPath("full_name").value as! String
-//        })
-//        
-//        ref.queryOrderedByChild("email").queryEqualToValue(userIdentifier).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-//                if ( snapshot.value is NSNull ) {
-//                    print("not found")
-//                } else {
-//                    for child in snapshot.children {
-//                        let n = child.value!!["email"] as! String
-//                        print(n)
-//                    }
-//                }
-//            })
         // My viewcontroller's background color
         self.view.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
         
@@ -140,6 +108,16 @@ class ProfileViewController: UIViewController {
             // NON FACEBOOK FIRST AND LAST NAME HERE
         }
         
+    }
+
+    @IBAction func visitTheWebsiteButtonTapped(sender: AnyObject) {
+        let svc = SFSafariViewController(URL: NSURL(string: "http://www.berkeleyaba.com")!)
+        svc.delegate = self
+        presentViewController(svc, animated: true, completion: nil)
+    }
+    
+    func safariViewControllerDidFinish(controller: SFSafariViewController) {
+        // For future implementations if I want to do anything upon dismissal
     }
 
     override func didReceiveMemoryWarning() {
