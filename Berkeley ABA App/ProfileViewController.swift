@@ -12,8 +12,10 @@ import FBSDKCoreKit
 import SDWebImage
 import Firebase
 
-class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var VisitTheWebsiteButton: UIButton!
+    @IBOutlet weak var ReportABugButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var firstAndLastName: UILabel!
@@ -91,15 +93,23 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 //                    }
 //                }
 //            })
+        // My viewcontroller's background color
+        self.view.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
         
+        // My report a bug button
+        ReportABugButton.backgroundColor = UIColor.whiteColor()
+        let myReportABugButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        ReportABugButton.layer.borderColor = myReportABugButtonColor.CGColor
+        ReportABugButton.layer.borderWidth = 0.5
         
-        // My table view
-        self.objects.addObject("Report a bug")
-        
-        self.tableView.reloadData()
+        // My visit the website button
+        VisitTheWebsiteButton.backgroundColor = UIColor.whiteColor()
+        let myVisitWebsiteButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        VisitTheWebsiteButton.layer.borderColor = myVisitWebsiteButtonColor.CGColor
+        VisitTheWebsiteButton.layer.borderWidth = 0.5
         
         // My logout button
-        logoutButton.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
+        logoutButton.backgroundColor = UIColor.whiteColor()
         let myLogoutButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         logoutButton.layer.borderColor = myLogoutButtonColor.CGColor
         logoutButton.layer.borderWidth = 0.5
@@ -135,26 +145,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - MY TABLE VIEW
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.objects.count
-    }
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ProfilePageTableViewCell
-        
-        cell.labelTitle.text = self.objects.objectAtIndex(indexPath.row) as? String
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("im here")
-        self.performSegueWithIdentifier("showView", sender: self)
     }
 }
 

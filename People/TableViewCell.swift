@@ -1,16 +1,16 @@
 //
-//  ProfilePageTableViewCell.swift
+//  TableViewCell.swift
 //  Berkeley ABA App
 //
-//  Created by Timothy Hsu on 6/7/16.
+//  Created by Timothy Hsu on 6/24/16.
 //  Copyright © 2016 Timothy Hsu. All rights reserved.
 //
 
 import UIKit
 
-class ProfilePageTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var labelTitle: UILabel!
+class TableViewCell: UITableViewCell {
+    
+    @IBOutlet var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

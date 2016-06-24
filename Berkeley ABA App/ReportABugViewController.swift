@@ -19,6 +19,7 @@ class ReportABugViewController: UIViewController, MFMailComposeViewControllerDel
         let myBodyTextBorderColor : UIColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
         Body.layer.borderColor = myBodyTextBorderColor.CGColor
         Body.layer.borderWidth = 1.0
+        Body.layer.cornerRadius = 7 // CHANGE THIS TO MAKE IT ROUNDER
         // Do any additional setup after loading the view.
     }
 
@@ -28,7 +29,7 @@ class ReportABugViewController: UIViewController, MFMailComposeViewControllerDel
     }
     
     // Submits the bug report - *TO RECIPIENT WILL NOT SHOW UP ON XCODE SIMULATOR
-    @IBAction func submitBug(sender: UIBarButtonItem) {
+    @IBAction func submitButtonTapped(sender: AnyObject) {
         print("Submit button tapped")
         
         let mailComposeViewController = configureMailComposeViewController()
@@ -38,7 +39,6 @@ class ReportABugViewController: UIViewController, MFMailComposeViewControllerDel
         } else {
             self.showSendMailErrorAlert()
         }
-        
     }
     
     func configureMailComposeViewController() -> MFMailComposeViewController {
