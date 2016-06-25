@@ -58,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxc-Ni-maF">
-                                <rect key="frame" x="0.0" y="526" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="526" width="375" height="45"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="0.95979732275009155" green="0.071732707321643829" blue="0.20522722601890564" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -67,14 +67,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xva-au-p62">
-                                <rect key="frame" x="0.0" y="286" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="286" width="375" height="42"/>
                                 <state key="normal" title="Visit The Website"/>
                                 <connections>
                                     <action selector="visitTheWebsiteButtonTapped:" destination="kjw-UE-K7i" eventType="touchUpInside" id="Hzn-Jt-s0Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttf-0B-Ov1">
-                                <rect key="frame" x="0.0" y="313" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="325" width="375" height="40"/>
                                 <state key="normal" title="Report A Bug"/>
                                 <connections>
                                     <segue destination="9mG-br-LKO" kind="show" id="t21-y3-Awi"/>
@@ -627,20 +627,20 @@
             </objects>
             <point key="canvasLocation" x="8197.5" y="1185.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Community Service Table View Controller-->
         <scene sceneID="zvI-Sa-WRj">
             <objects>
-                <tableViewController storyboardIdentifier="Community Service" id="1C4-bl-Sqc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XPh-mW-0dc">
+                <tableViewController storyboardIdentifier="Community Service" id="1C4-bl-Sqc" customClass="CommunityServiceTableViewController" customModule="Berkeley_ABA_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="XPh-mW-0dc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9S3-16-gBe">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Community Service Cell" id="9S3-16-gBe" userLabel="Community Service Cell">
+                                <rect key="frame" x="0.0" y="114" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9S3-16-gBe" id="9dA-AY-Kmk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -655,7 +655,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlQ-ag-sBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4703.5" y="406.5"/>
+            <point key="canvasLocation" x="4711.5" y="403.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="YwU-31-kfE">

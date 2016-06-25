@@ -22,6 +22,7 @@
 		B44DC2BF1D19FF2E00C419B9 /* PersonInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DC2BE1D19FF2E00C419B9 /* PersonInformationViewController.swift */; };
 		B44DC2C11D1AE4EC00C419B9 /* ThisPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DC2C01D1AE4EC00C419B9 /* ThisPerson.swift */; };
 		B44DC2D31D1DB44F00C419B9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DC2D21D1DB44F00C419B9 /* TableViewCell.swift */; };
+		B44DC2D71D1DF3CB00C419B9 /* CommunityServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44DC2D61D1DF3CB00C419B9 /* CommunityServiceTableViewController.swift */; };
 		B49EFCBF1D067505009EA5C8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCBE1D067505009EA5C8 /* libicucore.tbd */; };
 		B49EFCC11D067515009EA5C8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC01D067515009EA5C8 /* libc++.tbd */; };
 		B49EFCC31D067647009EA5C8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49EFCC21D067647009EA5C8 /* CFNetwork.framework */; };
@@ -80,6 +81,7 @@
 		B44DC2BE1D19FF2E00C419B9 /* PersonInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonInformationViewController.swift; path = "Berkeley ABA App/PersonInformationViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B44DC2C01D1AE4EC00C419B9 /* ThisPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThisPerson.swift; path = Officers/ThisPerson.swift; sourceTree = "<group>"; };
 		B44DC2D21D1DB44F00C419B9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B44DC2D61D1DF3CB00C419B9 /* CommunityServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityServiceTableViewController.swift; sourceTree = "<group>"; };
 		B49EFCBE1D067505009EA5C8 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		B49EFCC01D067515009EA5C8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B49EFCC21D067647009EA5C8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -208,17 +210,19 @@
 				B44DC2BE1D19FF2E00C419B9 /* PersonInformationViewController.swift */,
 				B44DC2D21D1DB44F00C419B9 /* TableViewCell.swift */,
 				B44DC2C01D1AE4EC00C419B9 /* ThisPerson.swift */,
-				B437094F1D04FB88004E0E75 /* Officers */,
+				B437094F1D04FB88004E0E75 /* Committees */,
 			);
 			name = People;
 			path = ../People;
 			sourceTree = "<group>";
 		};
-		B437094F1D04FB88004E0E75 /* Officers */ = {
+		B437094F1D04FB88004E0E75 /* Committees */ = {
 			isa = PBXGroup;
 			children = (
 				B43709501D04FB88004E0E75 /* OfficersTableViewController.swift */,
+				B44DC2D61D1DF3CB00C419B9 /* CommunityServiceTableViewController.swift */,
 			);
+			name = Committees;
 			path = Officers;
 			sourceTree = "<group>";
 		};
@@ -538,6 +542,7 @@
 				B44DC2C11D1AE4EC00C419B9 /* ThisPerson.swift in Sources */,
 				B43709511D04FB88004E0E75 /* OfficersTableViewController.swift in Sources */,
 				B43709161D04DC7D004E0E75 /* ProfileViewController.swift in Sources */,
+				B44DC2D71D1DF3CB00C419B9 /* CommunityServiceTableViewController.swift in Sources */,
 				B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */,
 				B44DC2BF1D19FF2E00C419B9 /* PersonInformationViewController.swift in Sources */,
 				B43709121D04DC7D004E0E75 /* AppDelegate.swift in Sources */,

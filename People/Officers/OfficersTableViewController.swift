@@ -41,7 +41,8 @@ class OfficersTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let whichPerson = thisPersonList[indexPath.row]
-        // MAKE EMAIL = THIS PERSON'S EMAIL
+        
+        // This information is passed into the selected person's page
         individualEmail = whichPerson.email
         individualName = whichPerson.name
         individualPosition = whichPerson.position
