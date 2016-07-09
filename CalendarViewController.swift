@@ -8,6 +8,16 @@
 import GoogleAPIClient
 import GTMOAuth2
 import UIKit
+import CoreLocation
+import AddressBookUI
+
+var individualEventlocation = ""
+var individualRoomNumber = ""
+var individualEventName = ""
+var individualEventDate = ""
+var individualEventTime = ""
+var eventLatitude = 0.0
+var eventLongitude = 0.0
 
 class CalendarViewController: UITableViewController {
     
@@ -28,14 +38,6 @@ class CalendarViewController: UITableViewController {
     // and initialize the Google Calendar API service
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        output.frame = view.bounds
-//        output.editable = false
-//        output.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
-//        output.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
-//        
-//        view.addSubview(output);
-        
         if let auth = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(
             kKeychainItemName,
             clientID: kClientID,
@@ -178,4 +180,58 @@ class CalendarViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
             return sectionName
         }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Getting my event location
+        let event = listOfEvents[indexPath.row]
+        let eventArr = event.componentsSeparatedByString("|")
+        let roomNumberWithSemicolon = eventArr[1]
+        let locationWithSemicolon = eventArr[2]
+        let roomNumber = roomNumberWithSemicolon.stringByReplacingOccurrencesOfString("|", withString: "")
+        let location = locationWithSemicolon.stringByReplacingOccurrencesOfString("|", withString: "")
+        let eventNameArray = eventArr[0].componentsSeparatedByString(" - ")
+        var eventName = eventNameArray[1]
+        eventName = eventName.stringByReplacingOccurrencesOfString(" - ", withString: "")
+        individualEventName = eventName
+        individualEventlocation = location
+        individualRoomNumber = roomNumber
+        let toGeocode = individualEventlocation + " Berkeley, CA"
+        forwardGeocoding(toGeocode)
+        
+        // Getting the time and date of the event
+        let eventTimeArr = eventArr[0].componentsSeparatedByString(",")
+        let eventDate = eventTimeArr[0]
+        var eventTime = eventTimeArr[1].stringByReplacingOccurrencesOfString(", ", withString: "")
+        let eventTimeWithTitleArr = eventTime.componentsSeparatedByString(" - ")
+        eventTime = eventTimeWithTitleArr[0]
+        individualEventDate = eventDate
+        individualEventTime = eventTime
+        
+        let vcName = "EventDetails"
+        let viewController = storyboard?.instantiateViewControllerWithIdentifier(vcName)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        
+    }
+    func forwardGeocoding(address: String) {
+        CLGeocoder().geocodeAddressString(address, completionHandler: { (placemarks, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            if placemarks?.count > 0 {
+                let placemark = placemarks?[0]
+                let location = placemark?.location
+                let coordinate = location?.coordinate
+                eventLatitude = coordinate!.latitude
+                eventLongitude = coordinate!.longitude
+                print("\nlat: \(coordinate!.latitude), long: \(coordinate!.longitude)")
+                if placemark?.areasOfInterest?.count > 0 {
+                    let areaOfInterest = placemark!.areasOfInterest![0]
+                    print(areaOfInterest)
+                } else {
+                    print("No area of interest found.")
+                }
+            }
+        })
+    }
 }

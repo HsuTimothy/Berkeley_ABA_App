@@ -11,6 +11,7 @@ import UIKit
 class CommunityServiceTableViewController: UITableViewController {
     var membersInCS = ["Nicholas Truong - Chair", "Katherine Luo - Chair"]
     var thisPersonList = [thisPerson]()
+    let positionList = ["Chairs", "Committee Members"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +60,7 @@ class CommunityServiceTableViewController: UITableViewController {
         return "Community Service"
     }
 
-
+    
 
     /*
     // MARK: - Navigation
