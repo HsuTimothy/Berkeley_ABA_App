@@ -457,9 +457,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spring2016RetreatPhoto" id="nNF-1l-Jpy">
+                            <rect key="frame" x="0.0" y="64" width="375" height="158"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="w8a-gO-Kuj">
-                                <rect key="frame" x="0.0" y="114" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="272" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w8a-gO-Kuj" id="5w1-hG-0sR">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -474,6 +478,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="PZH-yn-QcV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="image" destination="nNF-1l-Jpy" id="qHS-hp-m8p"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyF-lY-Bya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -558,9 +565,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spring2016Cabinet" id="9ht-Ex-UPK">
+                            <rect key="frame" x="0.0" y="64" width="375" height="116"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="OfficersCell" id="Mhg-ye-Gtj">
-                                <rect key="frame" x="0.0" y="114" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="230" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mhg-ye-Gtj" id="WZy-gF-Eql">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -1123,6 +1134,8 @@
         <image name="Campinele" width="500" height="272"/>
         <image name="People tab-bar" width="25" height="25"/>
         <image name="Profile tab-bar" width="25" height="25"/>
+        <image name="Spring2016Cabinet" width="676" height="318"/>
+        <image name="Spring2016RetreatPhoto" width="360" height="265"/>
         <image name="cell-phone" width="170" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
