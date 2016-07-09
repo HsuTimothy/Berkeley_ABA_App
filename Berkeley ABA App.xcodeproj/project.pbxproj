@@ -33,6 +33,7 @@
 		B4A5D50D1D066BD6004DD385 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5D50B1D066BD6004DD385 /* FBSDKLoginKit.framework */; };
 		B4CF72CF1D30898A00F40C56 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72CE1D30898A00F40C56 /* EventDetailsViewController.swift */; };
 		B4CF72D41D30A3B000F40C56 /* LocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72D31D30A3B000F40C56 /* LocationMapViewController.swift */; };
+		B4CF72D61D318A8A00F40C56 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72D51D318A8A00F40C56 /* CreditsViewController.swift */; };
 		B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B21D071EB8001AA109 /* Reachability.swift */; };
 		B4D7D3B91D07918E001AA109 /* ReportABugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */; };
 		B4D7D3C51D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D7D3C41D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib */; };
@@ -96,6 +97,7 @@
 		B4A5D50E1D066D51004DD385 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		B4CF72CE1D30898A00F40C56 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailsViewController.swift; path = ../EventDetailsViewController.swift; sourceTree = "<group>"; };
 		B4CF72D31D30A3B000F40C56 /* LocationMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMapViewController.swift; sourceTree = "<group>"; };
+		B4CF72D51D318A8A00F40C56 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = ../CreditsViewController.swift; sourceTree = "<group>"; };
 		B4D7D3B21D071EB8001AA109 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportABugViewController.swift; path = ../ReportABugViewController.swift; sourceTree = "<group>"; };
 		B4D7D3C41D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		B4D7D3BA1D07AB93001AA109 /* Profile Page */ = {
 			isa = PBXGroup;
 			children = (
+				B4CF72D51D318A8A00F40C56 /* CreditsViewController.swift */,
 				B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */,
 				B43709151D04DC7D004E0E75 /* ProfileViewController.swift */,
 			);
@@ -551,6 +554,7 @@
 				B44DC2D31D1DB44F00C419B9 /* TableViewCell.swift in Sources */,
 				B44DC2BD1D19FE3400C419B9 /* CommitteesTableViewController 15-57-32-314.swift in Sources */,
 				B49EFCCD1D06875D009EA5C8 /* CreateAccountViewController.swift in Sources */,
+				B4CF72D61D318A8A00F40C56 /* CreditsViewController.swift in Sources */,
 				B437094A1D04E178004E0E75 /* LoginViewController.swift in Sources */,
 				B4D7D3C71D0CBA65001AA109 /* CalendarViewController.swift in Sources */,
 				B44DC2C11D1AE4EC00C419B9 /* ThisPerson.swift in Sources */,

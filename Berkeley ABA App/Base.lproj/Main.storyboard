@@ -183,6 +183,13 @@
                                     <segue destination="9mG-br-LKO" kind="show" id="t21-y3-Awi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAK-wk-tnS">
+                                <rect key="frame" x="0.0" y="364" width="375" height="40"/>
+                                <state key="normal" title="Credits"/>
+                                <connections>
+                                    <segue destination="ik3-FA-NgO" kind="show" id="5Op-bi-DkV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -191,6 +198,7 @@
                     <connections>
                         <outlet property="ReportABugButton" destination="Ttf-0B-Ov1" id="TzB-H4-QPc"/>
                         <outlet property="VisitTheWebsiteButton" destination="xva-au-p62" id="faB-4c-Pn0"/>
+                        <outlet property="creditsButton" destination="AAK-wk-tnS" id="oFI-hO-PLw"/>
                         <outlet property="firstAndLastName" destination="uAh-Pr-Mqe" id="6tf-a4-rle"/>
                         <outlet property="logoutButton" destination="Zxc-Ni-maF" id="cOo-cQ-ynN"/>
                         <outlet property="profileImage" destination="JQA-Ze-mE9" id="LN1-9y-Dhz"/>
@@ -199,6 +207,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wpu-2Q-aBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1516.5" y="807.5"/>
+        </scene>
+        <!--Credits View Controller-->
+        <scene sceneID="uN8-Oh-9EA">
+            <objects>
+                <viewController id="ik3-FA-NgO" customClass="CreditsViewController" customModule="Berkeley_ABA_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zSE-yS-EIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="HKc-G9-XZp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QTU-yQ-riu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CreditsTimothyHsu" translatesAutoresizingMaskIntoConstraints="NO" id="VWZ-IT-BkP">
+                                <rect key="frame" x="20" y="106" width="165" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timothy Hsu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-YH-cYe">
+                                <rect key="frame" x="193" y="146" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spring 2016 IVP | Fall 2015 Publications Chair | Spring 2014 Medita Technology Chair" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-tB-XGF">
+                                <rect key="frame" x="193" y="165" width="162" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOD-7d-YBc">
+                                <rect key="frame" x="208" y="77" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contributors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv8-BS-jta">
+                                <rect key="frame" x="131" y="77" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ul-66-JJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540.5" y="1665.5"/>
         </scene>
         <!--Report A Bug-->
         <scene sceneID="rBu-LK-6M6">
@@ -212,7 +268,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6by-O3-2TH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6by-O3-2TH">
                                 <rect key="frame" x="20" y="145" width="335" height="204"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Comfortaa" family="Comfortaa" pointSize="14"/>
@@ -231,6 +287,9 @@
                                     <action selector="submitButtonTapped:" destination="9mG-br-LKO" eventType="touchUpInside" id="kJs-a5-Uc9"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bug" translatesAutoresizingMaskIntoConstraints="NO" id="YvR-ga-T6u">
+                                <rect key="frame" x="272" y="80" width="58" height="57"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1132,10 +1191,12 @@
         <image name="ABA Logo" width="400" height="400"/>
         <image name="Calendar tab-bar" width="25" height="25"/>
         <image name="Campinele" width="500" height="272"/>
+        <image name="CreditsTimothyHsu" width="682" height="455"/>
         <image name="People tab-bar" width="25" height="25"/>
         <image name="Profile tab-bar" width="25" height="25"/>
         <image name="Spring2016Cabinet" width="676" height="318"/>
         <image name="Spring2016RetreatPhoto" width="360" height="265"/>
+        <image name="bug" width="46" height="46"/>
         <image name="cell-phone" width="170" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>

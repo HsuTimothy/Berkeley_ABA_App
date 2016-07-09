@@ -15,6 +15,7 @@ import SafariServices
 
 class ProfileViewController: UIViewController, SFSafariViewControllerDelegate {
 
+    @IBOutlet weak var creditsButton: UIButton!
     @IBOutlet weak var ReportABugButton: UIButton!
     @IBOutlet weak var VisitTheWebsiteButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -75,6 +76,12 @@ class ProfileViewController: UIViewController, SFSafariViewControllerDelegate {
         let myVisitWebsiteButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         VisitTheWebsiteButton.layer.borderColor = myVisitWebsiteButtonColor.CGColor
         VisitTheWebsiteButton.layer.borderWidth = 0.5
+        
+        // My Credits button
+        creditsButton.backgroundColor = UIColor.whiteColor()
+        let myCreditsButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        creditsButton.layer.borderColor = myVisitWebsiteButtonColor.CGColor
+        creditsButton.layer.borderWidth = 0.5
         
         // My logout button
         logoutButton.backgroundColor = UIColor.whiteColor()
