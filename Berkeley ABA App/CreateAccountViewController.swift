@@ -24,6 +24,21 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var desiredPassword: UITextField!
     @IBOutlet weak var desiredUsername: UITextField!
     
+    func login() {
+        FIRAuth.auth()?.signInWithEmail(desiredUsername.text!, password: desiredPassword.text!, completion: { user, error in
+            if error != nil {
+                print("incorrect username or password")
+            }
+            else {
+                print("logged in no problem")
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let iniitalViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Events1ViewController")
+                appDelegate.window?.rootViewController = iniitalViewController
+                appDelegate.window?.makeKeyAndVisible()
+            }
+        })
+    }
+    
     @IBAction func createNewAccount(sender: UIButton) {
         if desiredPassword.text! != retypedPassword.text! {
             let myAlert = UIAlertView(title: "Error", message: "Passwords do not match", delegate: nil, cancelButtonTitle: "Ok")
@@ -49,16 +64,21 @@ class CreateAccountViewController: UIViewController {
                         // NOTE - PEOPLE WITH THE SAME FIRST AND LASTNAME WILL OVERRIDE EACH OTHER
                         let full_name = self.firstName.text! + " " + self.lastName.text!
                         let email = self.desiredUsername.text!
-                        var newUser = [ "email": email, "full_name": full_name]
-                        var usersRef = ref.childByAppendingPath("users")
                         var userKey = email.lowercaseString
                         userKey = userKey.stringByReplacingOccurrencesOfString(".", withString: ",")
-                        var users = [userKey: newUser]
-                        usersRef.setValue(users)
                         userIdentifier = self.desiredUsername.text!
                         userIdentifier = userIdentifier.lowercaseString
                         userIdentifier = userIdentifier.stringByReplacingOccurrencesOfString(".", withString: ",")
                         
+                        let usersReference = ref.child("users").child(userIdentifier)
+                        let values = ["email": email, "full_name": full_name]
+                        usersReference.updateChildValues(values, withCompletionBlock: {
+                            (err, ref) in
+                            if err != nil {
+                                print(err)
+                                return
+                            }
+                            print("saved user successfully to firebase db")})
                         self.login()
                     }
                 })
@@ -66,8 +86,8 @@ class CreateAccountViewController: UIViewController {
                 print("Internet connection failed")
                 let myAlert = UIAlertView(title: "Error", message: "No Internet Connection", delegate: nil, cancelButtonTitle: "Ok")
                 myAlert.show()
+                }
             }
-        }
     }
     
     override func viewDidLoad() {
@@ -80,20 +100,6 @@ class CreateAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func login() {
-        FIRAuth.auth()?.signInWithEmail(desiredUsername.text!, password: desiredPassword.text!, completion: { user, error in
-            if error != nil {
-                print("incorrect username or password")
-            }
-            else {
-                print("logged in no problem")
-                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                let iniitalViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Events1ViewController")
-                appDelegate.window?.rootViewController = iniitalViewController
-                appDelegate.window?.makeKeyAndVisible()
-            }
-        })
-    }
 
     /*
     // MARK: - Navigation

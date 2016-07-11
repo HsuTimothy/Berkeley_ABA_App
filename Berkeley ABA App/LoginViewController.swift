@@ -14,6 +14,7 @@ var facebookLogin = false
 var facebookFirstName = ""
 var facebookLastName = ""
 var userIdentifier = ""
+var facebookEmail = ""
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -93,6 +94,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     print(lastName)
                 }
                 if let email = result["email"] as? String {
+                    facebookEmail = email
                     print(email)
                 }
                 if let picture = result["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
@@ -141,6 +143,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 print(lastName)
             }
             if let email = result["email"] as? String {
+                facebookEmail = email
                 print(email)
             }
             if let picture = result["picture"] as? NSDictionary, data = picture["data"] as? NSDictionary, url = data["url"] as? String {
@@ -148,8 +151,45 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 profileUrl = url
             }
         }
+        
+        
         facebookLogin = true
-        self.performSegueWithIdentifier("showNew", sender: self)
+        
+        // Write data to my Firebase
+        // NOTE - PEOPLE WITH THE SAME FIRST AND LASTNAME WILL OVERRIDE EACH OTHER
+        FIRAuth.auth()?.signInWithEmail(facebookEmail, password: "facebook", completion: { user, error in
+            if error != nil {
+                FIRAuth.auth()?.createUserWithEmail(facebookEmail, password: "facebook", completion: { user, error in
+                    if error != nil {
+                        print(error)
+                        let myAlert = UIAlertView(title: "Alert", message: "Account already exists", delegate: nil, cancelButtonTitle: "Ok")
+                        myAlert.show()
+                    } else {
+                        let full_name = facebookFirstName + " " + facebookLastName
+                        let email = facebookEmail
+                        var userKey = email.lowercaseString
+                        userKey = userKey.stringByReplacingOccurrencesOfString(".", withString: ",")
+                        userIdentifier = email
+                        userIdentifier = userIdentifier.lowercaseString
+                        userIdentifier = userIdentifier.stringByReplacingOccurrencesOfString(".", withString: ",")
+                        
+                        let usersReference = ref.child("users").child(userIdentifier)
+                        let values = ["email": email, "full_name": full_name]
+                        usersReference.updateChildValues(values, withCompletionBlock: {
+                            (err, ref) in
+                            if err != nil {
+                                print(err)
+                                return
+                            }
+                            print("saved user successfully to firebase db")})
+                        
+                        self.performSegueWithIdentifier("showNew", sender: self)
+                    }
+                })
+            } else {
+                self.performSegueWithIdentifier("showNew", sender: self)
+            }
+        })
     }
 
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {

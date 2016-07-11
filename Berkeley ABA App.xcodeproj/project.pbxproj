@@ -34,6 +34,7 @@
 		B4CF72CF1D30898A00F40C56 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72CE1D30898A00F40C56 /* EventDetailsViewController.swift */; };
 		B4CF72D41D30A3B000F40C56 /* LocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72D31D30A3B000F40C56 /* LocationMapViewController.swift */; };
 		B4CF72D61D318A8A00F40C56 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72D51D318A8A00F40C56 /* CreditsViewController.swift */; };
+		B4CF72D81D32F2D300F40C56 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CF72D71D32F2D300F40C56 /* Launch Screen.storyboard */; };
 		B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B21D071EB8001AA109 /* Reachability.swift */; };
 		B4D7D3B91D07918E001AA109 /* ReportABugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */; };
 		B4D7D3C51D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D7D3C41D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib */; };
@@ -98,6 +99,7 @@
 		B4CF72CE1D30898A00F40C56 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetailsViewController.swift; path = ../EventDetailsViewController.swift; sourceTree = "<group>"; };
 		B4CF72D31D30A3B000F40C56 /* LocationMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMapViewController.swift; sourceTree = "<group>"; };
 		B4CF72D51D318A8A00F40C56 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = ../CreditsViewController.swift; sourceTree = "<group>"; };
+		B4CF72D71D32F2D300F40C56 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B4D7D3B21D071EB8001AA109 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportABugViewController.swift; path = ../ReportABugViewController.swift; sourceTree = "<group>"; };
 		B4D7D3C41D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				B4D7D3B21D071EB8001AA109 /* Reachability.swift */,
 				B43709451D04DCE3004E0E75 /* Berkeley ABA App-Bridging-Header.h */,
 				B4D7D3C41D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib */,
+				B4CF72D71D32F2D300F40C56 /* Launch Screen.storyboard */,
 				B4443D241D179A150088F58F /* GoogleService-Info.plist */,
 				B49EFCC81D0676A4009EA5C8 /* Firebase.framework */,
 			);
@@ -399,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CF72D81D32F2D300F40C56 /* Launch Screen.storyboard in Resources */,
 				B4D7D3C51D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib in Resources */,
 				B437091E1D04DC7D004E0E75 /* LaunchScreen.storyboard in Resources */,
 				B4443D251D179A150088F58F /* GoogleService-Info.plist in Resources */,
@@ -709,6 +713,7 @@
 			baseConfigurationReference = 7FCC436BEECDA361DFC7939B /* Pods-Berkeley ABA App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -749,6 +754,7 @@
 			baseConfigurationReference = 24829880FE1C6090E5EDEC60 /* Pods-Berkeley ABA App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

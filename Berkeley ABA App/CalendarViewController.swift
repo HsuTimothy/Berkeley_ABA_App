@@ -10,9 +10,9 @@ import GTMOAuth2
 import UIKit
 import CoreLocation
 import AddressBookUI
-import Firebase
 
 var individualEventlocation = ""
+var individualRoomNumber = ""
 var individualEventName = ""
 var individualEventDate = ""
 var individualEventTime = ""
@@ -22,7 +22,6 @@ var eventLongitude = 0.0
 class CalendarViewController: UITableViewController {
     
     var listOfEvents: [String] = []
-    var listOfEventsLocation: [String] = []
     let sectionName = "Upcoming Events"
     
     private let kKeychainItemName = "Google Calendar API"
@@ -39,28 +38,12 @@ class CalendarViewController: UITableViewController {
     // and initialize the Google Calendar API service
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // CHECKS IF MY PERSON IS LOGGED IN OR NOT
-        if FIRAuth.auth()?.currentUser?.uid == nil {
-            handleLogOut()
-        }
-        
         if let auth = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(
             kKeychainItemName,
             clientID: kClientID,
             clientSecret: nil) {
                 service.authorizer = auth
         }
-    }
-    
-    // LOGS MY USER OUT
-    func handleLogOut() {
-        do {
-            try FIRAuth.auth()?.signOut()
-        } catch let logoutError {
-            print(logoutError)
-        }
-        self.performSegueWithIdentifier("goToLogin", sender: self)
     }
     
     // When the view appears, ensure that the Google Calendar API service is authorized
@@ -118,8 +101,6 @@ class CalendarViewController: UITableViewController {
                     
                     // An array holding all my upcoming events
                     listOfEvents.append("\(startString) - \(event.summary)")
-                    listOfEventsLocation.append("\(event.location)")
-                    
                 }
             } else {
                 eventString = "No upcoming events found."
@@ -204,17 +185,18 @@ class CalendarViewController: UITableViewController {
         // Getting my event location
         let event = listOfEvents[indexPath.row]
         let eventArr = event.componentsSeparatedByString("|")
+        let roomNumberWithSemicolon = eventArr[1]
+        let locationWithSemicolon = eventArr[2]
+        let roomNumber = roomNumberWithSemicolon.stringByReplacingOccurrencesOfString("|", withString: "")
+        let location = locationWithSemicolon.stringByReplacingOccurrencesOfString("|", withString: "")
         let eventNameArray = eventArr[0].componentsSeparatedByString(" - ")
         var eventName = eventNameArray[1]
         eventName = eventName.stringByReplacingOccurrencesOfString(" - ", withString: "")
         individualEventName = eventName
-        individualEventlocation = listOfEventsLocation[indexPath.row]
-        let buildingNameArr = individualEventlocation.componentsSeparatedByString(" | ")
-        var buildingName = buildingNameArr[1]
-        let toGeocode = buildingName + ", Berkeley, CA"
-        print(toGeocode)
+        individualEventlocation = location
+        individualRoomNumber = roomNumber
+        let toGeocode = individualEventlocation + " Berkeley, CA"
         forwardGeocoding(toGeocode)
-        
         
         // Getting the time and date of the event
         let eventTimeArr = eventArr[0].componentsSeparatedByString(",")
