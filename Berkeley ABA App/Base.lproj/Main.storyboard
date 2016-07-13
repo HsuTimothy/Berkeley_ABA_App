@@ -85,7 +85,6 @@
         <!--Location Map View Controller-->
         <scene sceneID="q5z-fU-NSJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sd4-bd-MKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="KCK-4q-YIn" customClass="LocationMapViewController" customModule="Berkeley_ABA_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NNe-A2-JM6"/>
@@ -106,6 +105,7 @@
                         <outlet property="mapPage" destination="XWe-DN-yEz" id="xG0-ju-Kkm"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sd4-bd-MKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3389.5" y="-305.5"/>
         </scene>
@@ -117,9 +117,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CalendarEventPhoto" id="DU7-rq-0c8">
+                            <rect key="frame" x="0.0" y="64" width="375" height="142"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EventsCell" id="V7l-1S-Hkw">
-                                <rect key="frame" x="0.0" y="114" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="256" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V7l-1S-Hkw" id="RLf-HE-Esz">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -193,6 +197,13 @@
                                     <segue destination="ik3-FA-NgO" kind="show" id="5Op-bi-DkV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XD-je-usN">
+                                <rect key="frame" x="0.0" y="400" width="375" height="40"/>
+                                <state key="normal" title="Cabinet Access"/>
+                                <connections>
+                                    <segue destination="yhB-9P-yMX" kind="show" id="UIU-En-Nmq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -201,6 +212,7 @@
                     <connections>
                         <outlet property="ReportABugButton" destination="Ttf-0B-Ov1" id="TzB-H4-QPc"/>
                         <outlet property="VisitTheWebsiteButton" destination="xva-au-p62" id="faB-4c-Pn0"/>
+                        <outlet property="cabinetAccessButton" destination="5XD-je-usN" id="KCW-wg-XlI"/>
                         <outlet property="creditsButton" destination="AAK-wk-tnS" id="oFI-hO-PLw"/>
                         <outlet property="firstAndLastName" destination="uAh-Pr-Mqe" id="6tf-a4-rle"/>
                         <outlet property="logoutButton" destination="Zxc-Ni-maF" id="cOo-cQ-ynN"/>
@@ -232,7 +244,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spring 2016 IVP | Fall 2015 Publications Chair | Spring 2014 Medita Technology Chair" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-tB-XGF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spring 2016 IVP | Fall 2015 Publications Chair | Spring 2014 Media Technology Chair" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-tB-XGF">
                                 <rect key="frame" x="193" y="165" width="162" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -257,7 +269,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ul-66-JJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540.5" y="1665.5"/>
+            <point key="canvasLocation" x="1516.5" y="1669.5"/>
+        </scene>
+        <!--Cabinet Access Login View Controller-->
+        <scene sceneID="cx8-43-qeW">
+            <objects>
+                <viewController id="yhB-9P-yMX" customClass="CabinetAccessLoginViewController" customModule="Berkeley_ABA_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JlS-ND-fLV"/>
+                        <viewControllerLayoutGuide type="bottom" id="mZr-eB-ysI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t6g-OV-woc" customClass="cab">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-m6-oCz">
+                                <rect key="frame" x="58" y="319" width="254" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-ix-puH">
+                                <rect key="frame" x="58" y="281" width="254" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White Profile Icon" translatesAutoresizingMaskIntoConstraints="NO" id="SME-tH-Uaq">
+                                <rect key="frame" x="25" y="290" width="25" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White Lock Icon" translatesAutoresizingMaskIntoConstraints="NO" id="1gK-rs-YpZ">
+                                <rect key="frame" x="25" y="323" width="25" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ABA Logo" translatesAutoresizingMaskIntoConstraints="NO" id="DX9-rG-wTc">
+                                <rect key="frame" x="67" y="72" width="240" height="194"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJ8-yr-Fes">
+                                <rect key="frame" x="58" y="372" width="254" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.61323006349999998" blue="0.063997718470000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Authenticate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AuthenticateUser:" destination="yhB-9P-yMX" eventType="touchUpInside" id="yII-X2-giw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="AuthenticateButton" destination="aJ8-yr-Fes" id="Kje-Vj-JLL"/>
+                        <outlet property="PasswordField" destination="g1B-m6-oCz" id="ybs-TN-iEz"/>
+                        <outlet property="UsernameField" destination="KTp-ix-puH" id="BJ4-a5-GSH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlp-F8-QL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931.5" y="1669.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KAT-Cl-uX2">
+            <objects>
+                <viewController storyboardIdentifier="CabinetAccess" id="Kp8-uX-R0H" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="icL-X7-HQn"/>
+                        <viewControllerLayoutGuide type="bottom" id="U3S-Gt-lw5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d9A-Fb-PwM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AeK-dL-VeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2379.5" y="1669.5"/>
         </scene>
         <!--Report A Bug-->
         <scene sceneID="rBu-LK-6M6">
@@ -318,7 +415,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQ2-ir-H6u">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQ2-ir-H6u">
                                 <rect key="frame" x="20" y="199" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Sdt-ls-k05"/>
@@ -326,7 +423,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-Af-ziL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-Af-ziL">
                                 <rect key="frame" x="20" y="237" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="JOJ-FF-3tM"/>
@@ -334,7 +431,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Retype Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wj-x0-9OD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Retype Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wj-x0-9OD">
                                 <rect key="frame" x="20" y="275" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zPV-of-foJ"/>
@@ -342,7 +439,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NT-7E-WB9">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NT-7E-WB9">
                                 <rect key="frame" x="123" y="352" width="128" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="c5g-3g-lZZ"/>
@@ -353,7 +450,7 @@
                                     <action selector="createNewAccount:" destination="wXS-h2-4fc" eventType="touchUpInside" id="Dtb-Lk-Fhb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xio-dZ-raW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xio-dZ-raW">
                                 <rect key="frame" x="20" y="161" width="162" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MXl-KR-aHm"/>
@@ -362,12 +459,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1R-98-KDn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1R-98-KDn">
                                 <rect key="frame" x="190" y="161" width="165" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Creating An Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-NH-XL9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Creating An Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-NH-XL9">
                                 <rect key="frame" x="83" y="85" width="209" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1193,12 +1290,15 @@
     <resources>
         <image name="ABA Logo" width="400" height="400"/>
         <image name="Calendar tab-bar" width="25" height="25"/>
+        <image name="CalendarEventPhoto" width="682" height="452"/>
         <image name="Campinele" width="500" height="272"/>
         <image name="CreditsTimothyHsu" width="682" height="455"/>
         <image name="People tab-bar" width="25" height="25"/>
         <image name="Profile tab-bar" width="25" height="25"/>
         <image name="Spring2016Cabinet" width="676" height="318"/>
         <image name="Spring2016RetreatPhoto" width="360" height="265"/>
+        <image name="White Lock Icon" width="42" height="42"/>
+        <image name="White Profile Icon" width="355" height="355"/>
         <image name="bug" width="46" height="46"/>
         <image name="cell-phone" width="170" height="170"/>
     </resources>

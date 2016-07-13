@@ -15,6 +15,7 @@ import SafariServices
 
 class ProfileViewController: UIViewController, SFSafariViewControllerDelegate {
 
+    @IBOutlet weak var cabinetAccessButton: UIButton!
     @IBOutlet weak var creditsButton: UIButton!
     @IBOutlet weak var ReportABugButton: UIButton!
     @IBOutlet weak var VisitTheWebsiteButton: UIButton!
@@ -24,7 +25,7 @@ class ProfileViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBAction func LogoutButtonTapped(sender: UIButton) {
-        
+
         if facebookLogin == false {
             do {
                 nonFacebookFirstName = ""
@@ -82,6 +83,12 @@ class ProfileViewController: UIViewController, SFSafariViewControllerDelegate {
         let myCreditsButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         creditsButton.layer.borderColor = myVisitWebsiteButtonColor.CGColor
         creditsButton.layer.borderWidth = 0.5
+        
+        // My Cabinet Access Button
+        cabinetAccessButton.backgroundColor = UIColor.whiteColor()
+        let cabinetAccessButtonColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        cabinetAccessButton.layer.borderColor = cabinetAccessButtonColor.CGColor
+        cabinetAccessButton.layer.borderWidth = 0.5
         
         // My logout button
         logoutButton.backgroundColor = UIColor.whiteColor()
