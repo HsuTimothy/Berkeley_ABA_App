@@ -37,6 +37,7 @@
 		B4CF72D81D32F2D300F40C56 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4CF72D71D32F2D300F40C56 /* Launch Screen.storyboard */; };
 		B4CF72DC1D36323C00F40C56 /* BlueGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72DB1D36323C00F40C56 /* BlueGradientBackground.swift */; };
 		B4CF72DE1D36CF1400F40C56 /* CabinetAccessLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72DD1D36CF1400F40C56 /* CabinetAccessLoginViewController.swift */; };
+		B4CF72E31D375E8200F40C56 /* CabinetAccessHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF72E21D375E8200F40C56 /* CabinetAccessHome.swift */; };
 		B4D7D3B31D071EB8001AA109 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B21D071EB8001AA109 /* Reachability.swift */; };
 		B4D7D3B91D07918E001AA109 /* ReportABugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */; };
 		B4D7D3C51D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D7D3C41D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib */; };
@@ -102,8 +103,9 @@
 		B4CF72D31D30A3B000F40C56 /* LocationMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMapViewController.swift; sourceTree = "<group>"; };
 		B4CF72D51D318A8A00F40C56 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = ../CreditsViewController.swift; sourceTree = "<group>"; };
 		B4CF72D71D32F2D300F40C56 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		B4CF72DB1D36323C00F40C56 /* BlueGradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueGradientBackground.swift; sourceTree = "<group>"; };
-		B4CF72DD1D36CF1400F40C56 /* CabinetAccessLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CabinetAccessLoginViewController.swift; sourceTree = "<group>"; };
+		B4CF72DB1D36323C00F40C56 /* BlueGradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlueGradientBackground.swift; path = ../BlueGradientBackground.swift; sourceTree = "<group>"; };
+		B4CF72DD1D36CF1400F40C56 /* CabinetAccessLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CabinetAccessLoginViewController.swift; path = ../CabinetAccessLoginViewController.swift; sourceTree = "<group>"; };
+		B4CF72E21D375E8200F40C56 /* CabinetAccessHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CabinetAccessHome.swift; sourceTree = "<group>"; };
 		B4D7D3B21D071EB8001AA109 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportABugViewController.swift; path = ../ReportABugViewController.swift; sourceTree = "<group>"; };
 		B4D7D3C41D0CBA43001AA109 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
@@ -249,14 +251,23 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		B4CF72DF1D375E3600F40C56 /* Cabinet Access */ = {
+			isa = PBXGroup;
+			children = (
+				B4CF72DB1D36323C00F40C56 /* BlueGradientBackground.swift */,
+				B4CF72E21D375E8200F40C56 /* CabinetAccessHome.swift */,
+				B4CF72DD1D36CF1400F40C56 /* CabinetAccessLoginViewController.swift */,
+			);
+			path = "Cabinet Access";
+			sourceTree = "<group>";
+		};
 		B4D7D3BA1D07AB93001AA109 /* Profile Page */ = {
 			isa = PBXGroup;
 			children = (
 				B4CF72D51D318A8A00F40C56 /* CreditsViewController.swift */,
 				B4D7D3B81D07918E001AA109 /* ReportABugViewController.swift */,
 				B43709151D04DC7D004E0E75 /* ProfileViewController.swift */,
-				B4CF72DD1D36CF1400F40C56 /* CabinetAccessLoginViewController.swift */,
-				B4CF72DB1D36323C00F40C56 /* BlueGradientBackground.swift */,
+				B4CF72DF1D375E3600F40C56 /* Cabinet Access */,
 			);
 			path = "Profile Page";
 			sourceTree = "<group>";
@@ -571,6 +582,7 @@
 				B44DC2C11D1AE4EC00C419B9 /* ThisPerson.swift in Sources */,
 				B43709511D04FB88004E0E75 /* OfficersTableViewController.swift in Sources */,
 				B43709161D04DC7D004E0E75 /* ProfileViewController.swift in Sources */,
+				B4CF72E31D375E8200F40C56 /* CabinetAccessHome.swift in Sources */,
 				B4CF72CF1D30898A00F40C56 /* EventDetailsViewController.swift in Sources */,
 				B4CF72DE1D36CF1400F40C56 /* CabinetAccessLoginViewController.swift in Sources */,
 				B44DC2D71D1DF3CB00C419B9 /* CommunityServiceTableViewController.swift in Sources */,

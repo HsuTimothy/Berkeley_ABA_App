@@ -337,24 +337,71 @@
             </objects>
             <point key="canvasLocation" x="1931.5" y="1669.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="KAT-Cl-uX2">
+        <!--Cabinet Access Home-->
+        <scene sceneID="qLy-uP-W94">
             <objects>
-                <viewController storyboardIdentifier="CabinetAccess" id="Kp8-uX-R0H" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CabinetAccess" id="s7X-xY-Efo" customClass="CabinetAccessHome" customModule="Berkeley_ABA_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="icL-X7-HQn"/>
-                        <viewControllerLayoutGuide type="bottom" id="U3S-Gt-lw5"/>
+                        <viewControllerLayoutGuide type="top" id="B3x-iK-3H6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ofx-oF-Wnm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="d9A-Fb-PwM">
+                    <view key="view" contentMode="scaleToFill" id="Lyi-ta-zJs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ykg-6s-9vC">
+                                <rect key="frame" x="20" y="178" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Committee / Alumni" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mnm-4O-t4d">
+                                <rect key="frame" x="20" y="216" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D95-tm-V5o">
+                                <rect key="frame" x="20" y="254" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number: (###) ###-####" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNo-vQ-pT5">
+                                <rect key="frame" x="20" y="292" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Position(s): Chair/Committee Member" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Du-PR-zpM">
+                                <rect key="frame" x="20" y="330" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vV-e9-NdE">
+                                <rect key="frame" x="148" y="376" width="79" height="30"/>
+                                <state key="normal" title="Add Person"/>
+                                <connections>
+                                    <action selector="addPersonToDatabase:" destination="s7X-xY-Efo" eventType="touchUpInside" id="tRT-l1-gd2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add User To Database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nim-U9-kXn">
+                                <rect key="frame" x="101" y="140" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="CommitteeTextField" destination="mnm-4O-t4d" id="gHu-96-A2b"/>
+                        <outlet property="EmailTextField" destination="D95-tm-V5o" id="Kcm-pC-Tys"/>
+                        <outlet property="FullNameTextField" destination="Ykg-6s-9vC" id="z4a-xm-9xt"/>
+                        <outlet property="PhoneNumberTextField" destination="MNo-vQ-pT5" id="Xbv-Ks-EpL"/>
+                        <outlet property="PositionTextField" destination="2Du-PR-zpM" id="EqW-CA-NqO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AeK-dL-VeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6P-y4-kAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2379.5" y="1669.5"/>
+            <point key="canvasLocation" x="2326.5" y="1669.5"/>
         </scene>
         <!--Report A Bug-->
         <scene sceneID="rBu-LK-6M6">
